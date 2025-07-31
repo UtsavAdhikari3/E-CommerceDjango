@@ -9,4 +9,4 @@ class Product(models.Model):
     in_stock = models.BooleanField()
     quantity = models.IntegerField(validators=[MaxValueValidator(1000),MinValueValidator(1)])
     created_date = models.DateField(auto_now_add=True)
-    image = models.ImageField()
+    image = models.ImageField(blank=True,null=True)
